@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatic Download</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Change 'file.zip' to the actual file you want to download
+            var fileUrl = "PETVENTURE.apk";
+            var a = document.createElement("a");
+            a.href = fileUrl;
+            a.download = fileUrl.split('/').pop();
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        });
+    </script>
+</head>
+<body>
+    <h1>Your download should start automatically</h1>
+    <p>If it doesn't, <a href="PETVENTURE.apk" download>click here to download manually</a>.</p>
+</body>
+</html>
+
